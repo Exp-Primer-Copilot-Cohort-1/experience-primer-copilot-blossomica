@@ -53,4 +53,8 @@ var server = http.createServer(function (req, res) {
             limit = parseInt(limit);
 
             // Check if limit is integer
-            if (isNaN
+            if (isNaN(limit)) {
+                // Set limit to undefined
+                limit = undefined;
+            }
+        }
